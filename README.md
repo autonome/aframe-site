@@ -34,9 +34,15 @@ And then have `aframe-site` point to that `aframe`:
     cd aframe-site
     npm link aframe
 
-If you're curious, there is a soft link for `src/docs` that points to `node_modules/aframe/docs/`. It was created like so:
+If you're curious, for the latest stable version of the docs, there's a soft link to the latest version of those docs `src/docs` that points to `node_modules/aframe/docs/`. It was created like so:
 
-    ln -s ../node_modules/aframe/docs src/docs
+    cd src/docs/
+    mkdir -p
+    ln -s ../../node_modules/aframe-0-x-x/docs 0-x-x
+    ln -s ../../node_modules/aframe/docs/* .
+
+ln -s ../../node_modules/aframe/docs/* .
+ln -s ../../node_modules/aframe/docs/* .
 
 
 ## Deployment
